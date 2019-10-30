@@ -1,0 +1,15 @@
+@mixin button($bgColor, $txtColor) {
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    padding: .5em 1em;
+    background: $bgColor;
+    color: $txtColor;
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    @content;
+}

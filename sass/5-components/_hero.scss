@@ -1,0 +1,42 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
+    &__overlay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .4);
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__title {
+        width: 100%;
+        margin-top: 8em;
+        text-align: center;
+    }
+
+    &__cta {
+        @include button($clr-primary, #000);
+
+        &:hover,
+        &:focus {
+            background: red;
+        }
+    }
+}

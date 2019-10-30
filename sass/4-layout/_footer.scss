@@ -1,0 +1,18 @@
+.main-footer {
+    &__wrapper {
+        border-top: 2px solid #000;
+        padding: 1em 0 2em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__address {
+        font-style: normal;
+    }
+
+    &__contact {
+        a {
+            display: block;
+        }
+    }
+}

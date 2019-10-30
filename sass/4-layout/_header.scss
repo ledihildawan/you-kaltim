@@ -1,0 +1,15 @@
+.main-header {
+    // margin-top: 5.25em;
+    position: relative;
+    z-index: 999;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__addons {
+        display: flex;
+    }
+}

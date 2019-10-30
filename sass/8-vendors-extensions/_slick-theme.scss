@@ -1,0 +1,29 @@
+.slick-next,
+.slick-prev {
+    height: 48px;
+    width: 24px;
+
+    &::before {
+        display: none;
+    }
+}
+
+.slick-prev {
+    left: -53px;
+    background: url('images/arrow-prev.svg') center/cover no-repeat;
+
+    &:focus,
+    &:hover {
+        background: url('images/arrow-prev-hover.svg') center/cover no-repeat;
+    }
+}
+
+.slick-next {
+    right: -53px;
+    background: url('images/arrow-next.svg') center/cover no-repeat;
+
+    &:focus,
+    &:hover {
+        background: url('images/arrow-next-hover.svg') center/cover no-repeat;
+    }
+}

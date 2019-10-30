@@ -1,0 +1,103 @@
+.space .section {
+    padding: 0;
+}
+
+.space__intro,
+.space__report-upcoming {
+    height: 100vh;
+    background: center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.choices {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.choices__item {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: red;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    object-fit: cover;
+    background: center/cover no-repeat;
+    transition: opacity .2s ease-in-out;
+}
+
+.choices__item:hover {
+    opacity: .75;
+}
+
+.choices__item:first-child {
+    margin-right: 2em;
+    color: #000;
+}
+
+.choices__link {
+    font-size: 2rem;
+    line-height: 1.6em;
+}
+
+.choices__item:hover .choices__link {
+    opacity: 1;
+}
+
+.you-space-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.you-space-grid__item {
+    position: relative;
+    flex: 1 0 50%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    object-fit: center;
+    background: center/cover no-repeat;
+    overflow: hidden;
+}
+
+.you-space-grid__item:focus .you-space-grid__bg,
+.you-space-grid__item:hover .you-space-grid__bg {
+    transform: scale(1.25);
+}
+
+.you-space-grid__item:focus .you-space-grid__link,
+.you-space-grid__item:hover .you-space-grid__link {
+    transform: scale(1.5);
+}
+
+.you-space-grid__item:first-child .you-space-grid__link,
+.you-space-grid__item:last-child .you-space-grid__link {
+    color: #000;
+}
+
+.you-space-grid__bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: center/cover no-repeat;
+    transition: transform .2s ease-in-out;
+}
+
+.you-space-grid__link {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transition: transform .2s ease-in-out .1125s;
+}

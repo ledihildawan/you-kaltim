@@ -1,0 +1,35 @@
+.main-nav {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 1em 0;
+}
+
+.menu-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+
+        a {
+            font-weight: 600;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            transition: color .2s ease-in-out;
+
+            &:hover,
+            &:focus {
+                color: $clr-primary;
+            }
+        }
+    }
+
+    &__item.active {
+        color: $clr-primary;
+    }
+}

@@ -1,0 +1,27 @@
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+
+    &__text {
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__link {
+        display: block;
+    }
+}
