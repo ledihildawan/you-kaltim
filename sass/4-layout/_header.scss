@@ -1,7 +1,11 @@
 .main-header {
-    // margin-top: 5.25em;
-    position: relative;
-    z-index: 999;
+    padding: 2em 0 1.5em;
+    position: absolute;
+    z-index: 999999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .2s ease-in-out;
 
     &__wrapper {
         display: flex;
@@ -12,4 +16,30 @@
     &__addons {
         display: flex;
     }
+}
+
+.main-header.fixed {
+    position: fixed;
+    top: 0;
+    background: #000;
+}
+
+.logo {
+    &__image {
+        border-radius: 100%;
+    }
+}
+
+.main-header__addons {
+    img {
+        border-radius: 100%;
+    }
+}
+
+.search {
+    margin-right: 1em;
+}
+
+.languages-switch img:last-child {
+    margin-left: .5em;
 }

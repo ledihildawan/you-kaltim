@@ -2902,8 +2902,14 @@ p {
 }
 
 .main-header {
-  position: relative;
-  z-index: 999;
+  padding: 2em 0 1.5em;
+  position: absolute;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .main-header__wrapper {
@@ -2924,10 +2930,78 @@ p {
   display: flex;
 }
 
+.main-header.fixed {
+  position: fixed;
+  top: 0;
+  background: #000;
+}
+
+.logo__image {
+  border-radius: 100%;
+}
+
+.main-header__addons img {
+  border-radius: 100%;
+}
+
+.search {
+  margin-right: 1em;
+}
+
+.languages-switch img:last-child {
+  margin-left: .5em;
+}
+
+.main-header.fixed .main-nav {
+  border-top: 2px solid #13D85E;
+  border-bottom: 2px solid #13D85E;
+  padding: .25em 0;
+  -webkit-transition: border-color .2s ease-in-out;
+  transition: border-color .2s ease-in-out;
+}
+
+.main-header.fixed .main-nav.fixed {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.main-header.fixed .menu-list:hover .menu-list__item a:not(:hover) {
+  color: #13D85E;
+}
+
+.main-header.fixed .menu-list .menu-list__item:not(:first-child) {
+  margin-left: 1em;
+}
+
+.main-header.fixed .menu-list .menu-list__item a {
+  color: #13D85E;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+
+.main-header.fixed .menu-list .menu-list__item a:focus, .main-header.fixed .menu-list .menu-list__item a:hover {
+  color: #fff;
+}
+
+.main-header.fixed .menu-list .menu-list__item.active {
+  color: #fff;
+}
+
+.main-header.fixed .menu-list .menu-list__item.active a {
+  color: inherit;
+}
+
 .main-nav {
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  padding: 1em 0;
+  padding: .25em 0;
+  -webkit-transition: border-color .2s ease-in-out;
+  transition: border-color .2s ease-in-out;
+}
+
+.main-nav.hover {
+  border-top-color: #13D85E;
+  border-bottom-color: #13D85E;
 }
 
 .menu-list {
@@ -2942,11 +3016,17 @@ p {
           justify-content: space-between;
 }
 
-.menu-list__item:not(:last-child) {
-  margin-right: 1em;
+.menu-list:hover .menu-list__item a:not(:hover) {
+  color: #fff;
+}
+
+.menu-list__item:not(:first-child) {
+  margin-left: 1em;
 }
 
 .menu-list__item a {
+  margin-right: -8px;
+  color: inherit;
   font-weight: 600;
   letter-spacing: 8px;
   text-transform: uppercase;
@@ -2954,7 +3034,7 @@ p {
   transition: color .2s ease-in-out;
 }
 
-.menu-list__item a:hover, .menu-list__item a:focus {
+.menu-list__item a:focus, .menu-list__item a:hover {
   color: #13D85E;
 }
 

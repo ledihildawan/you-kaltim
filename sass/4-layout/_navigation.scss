@@ -1,7 +1,55 @@
+.main-header.fixed .main-nav {
+    border-top: 2px solid $clr-primary;
+    border-bottom: 2px solid $clr-primary;
+    padding: .25em 0;
+    transition: border-color .2s ease-in-out;
+}
+
+.main-header.fixed .main-nav.fixed {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.main-header.fixed .menu-list {
+    &:hover .menu-list__item a:not(:hover) {
+        color: $clr-primary;
+    }
+
+    .menu-list__item {
+        &:not(:first-child) {
+            margin-left: 1em;
+        }
+
+        a {
+            color: $clr-primary;
+            transition: color .2s ease-in-out;
+
+            &:focus,
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .menu-list__item.active {
+        color: #fff;
+
+        a {
+            color: inherit;
+        }
+    }
+}
+
 .main-nav {
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
-    padding: 1em 0;
+    padding: .25em 0;
+    transition: border-color .2s ease-in-out;
+}
+
+.main-nav.hover {
+    border-top-color: $clr-primary;
+    border-bottom-color: $clr-primary;
 }
 
 .menu-list {
@@ -11,19 +59,26 @@
     display: flex;
     justify-content: space-between;
 
+    &:hover &__item a:not(:hover) {
+        color: #fff;
+    }
+
     &__item {
-        &:not(:last-child) {
-            margin-right: 1em;
+        &:not(:first-child) {
+            margin-left: 1em;
         }
 
         a {
+            margin-right: -8px;
+            color: inherit;
             font-weight: 600;
             letter-spacing: 8px;
             text-transform: uppercase;
             transition: color .2s ease-in-out;
 
-            &:hover,
-            &:focus {
+
+            &:focus,
+            &:hover {
                 color: $clr-primary;
             }
         }
