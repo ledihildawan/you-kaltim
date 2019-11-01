@@ -2937,6 +2937,8 @@ p {
 }
 
 .logo__image {
+  width: 128px;
+  height: 128px;
   border-radius: 100%;
 }
 
@@ -2948,8 +2950,41 @@ p {
   margin-right: 1em;
 }
 
-.languages-switch img:last-child {
+.languages-switch a:last-child {
   margin-left: .5em;
+}
+
+.languages-switch__link {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  text-indent: -999999999px;
+  overflow: hidden;
+}
+
+#bahasaIndonesia {
+  background: url("https://cdn.britannica.com/48/1648-004-644EBE62/Flag-Indonesia.jpg") center/cover no-repeat;
+}
+
+#english {
+  background: url("https://cdn.britannica.com/33/4833-050-0FE70191/Flag-United-States-of-America.jpg") center/cover no-repeat;
+}
+
+.search {
+  position: relative;
+  cursor: pointer;
+  margin-right: 2em;
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  text-indent: -999999999px;
+  background: url("images/search-icon-white.svg") center/contain no-repeat;
+}
+
+.search__form {
+  position: absolute;
 }
 
 .main-header.fixed .main-nav {

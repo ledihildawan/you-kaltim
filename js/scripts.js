@@ -83,6 +83,7 @@
 
     const mainHeader = document.querySelector('header.main-header');
     const menuLinks = document.querySelectorAll('.main-nav .menu-list .menu-list__item a');
+    const logoImage = document.querySelector('.logo__image');
 
     menuLinks.forEach((menuLink) => {
         if (mainHeader.classList.contains('fixed')) {
@@ -117,8 +118,13 @@
                     menuLink.closest('.main-nav').classList.remove('fixed');
                 });
             });
+
+            logoImage.src = "http://127.0.0.1:5500/images/logo%20(2).png";
+            document.querySelector('.search').style.backgroundImage = 'url(\'http://127.0.0.1:5500/images/search-icon-green.svg\')';
         } else {
             mainHeader.classList.remove('fixed');
+            logoImage.src = "http://127.0.0.1:5500/images/logo%20(3).png";
+            document.querySelector('.search').setAttribute('style', '');
         }
     });
 })();
