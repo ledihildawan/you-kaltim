@@ -1,5 +1,6 @@
 .splash-screen {
     position: fixed;
+    z-index: 9999999999;
     top: 0;
     left: 0;
     width: 100%;
@@ -8,6 +9,7 @@
     justify-content: center;
     align-items: center;
     background: #000;
+    transition: top .2s ease-out;
 
     &__text {
         color: #fff;
@@ -24,4 +26,8 @@
     &__link {
         display: block;
     }
+}
+
+.splash-screen.close {
+    top: -100%;
 }

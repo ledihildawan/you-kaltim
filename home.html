@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/main.css">
+</head>
+<body class="home">
+    <div class="splash-screen">
+        <div class="splash-screen__content">
+            <p class="splash-screen__text">
+                Hey! Welcome
+                <img class="splash-screen__image" src="https://via.placeholder.com/64x64" alt="Typography welcome image">
+                to the online
+                <br>create space of
+                <span class="splash-screen__link">youkaltim.com</span>
+            </p>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="main-header__wrapper">
+                <div class="main-header__logo logo">
+                    <a href="#" class="logo__link">
+                        <img src="https://via.placeholder.com/128x128" alt="youkaltim logo" class="logo__image">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="main-nav__list menu-list">
+                        <li class="menu-list__item active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#">Connect</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#">Space</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="#">Collaborate</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="main-header__addons">
+                    <div class="search">
+                        <img src="https://via.placeholder.com/64x64" alt="Icon search">
+                    </div>
+                    <div class="languages-switch">
+                        <img id="bahasaIndonesia" src="https://via.placeholder.com/64x64" alt="Bahasa Indonesia" class="languages-swith__item">
+                        <img id="english" src="https://via.placeholder.com/64x64" alt="Bahasa Inggris" class="languages-swith__item">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="visually-hidden">YOU Kaltim</h1>
+        <div class="main-content__wrapper">
+            <div class="hero" style="background-image: url(/images/space-you-coffee.jpg);">
+                <div class="hero__overlay"></div>
+                <div class="container">
+                    <div class="hero__content">
+                        <h2 class="hero__title">
+                            <img src="https://via.placeholder.com/256x256" alt="Comming soon you coffee">
+                        </h2>
+                        <a href="#" class="hero__cta">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+        (() => {
+            window.onload = function () {
+                
+            }
+
+            const splashScreen = document.querySelector('.splash-screen');
+
+            splashScreen.addEventListener('click', function () {
+                splashScreen.classList.add('close');
+            });
+
+            splashScreen.addEventListener('transitionend', function () {
+                this.remove();
+            });
+        })();
+    </script>
+</body>
+</html>

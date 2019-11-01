@@ -1,13 +1,108 @@
-.login {
+.signin-signup {
     background: #fff;
     color: #000;
 }
 
-.login ::placeholder {
+.signin-signup ::placeholder {
     text-transform: lowercase;
 }
 
-.login {
+// Header
+
+.signin-signup .main-header.fixed .main-nav {
+    border-top: 2px solid $clr-primary;
+    border-bottom: 2px solid $clr-primary;
+}
+
+.signin-signup .main-header.fixed .main-nav.fixed {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.signin-signup .main-header.fixed .menu-list {
+    &:hover .menu-list__item a:not(:hover) {
+        color: $clr-primary;
+    }
+
+    .menu-list__item {
+        &:not(:first-child) {
+            margin-left: 1em;
+        }
+
+        a {
+            color: $clr-primary;
+            transition: color .2s ease-in-out;
+
+            &:focus,
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .menu-list__item.active {
+        color: #fff;
+
+        a {
+            color: inherit;
+        }
+    }
+}
+
+.signin-signup .main-nav {
+    border-top-color: #000;
+    border-bottom-color: #000;
+}
+
+.signin-signup .main-nav.hover {
+    border-top-color: $clr-primary;
+    border-bottom-color: $clr-primary;
+}
+
+.signin-signup .menu-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover .menu-list__item a:not(:hover) {
+        color: #000;
+    }
+
+    .menu-list {
+        &:not(:first-child) {
+            margin-left: 1em;
+        }
+
+        a {
+            margin-right: -8px;
+            color: inherit;
+            font-weight: 600;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            transition: color .2s ease-in-out;
+
+
+            &:focus,
+            &:hover {
+                color: $clr-primary;
+            }
+        }
+    }
+
+    .menu-list__item.active {
+        color: $clr-primary;
+    }
+}
+
+// end of Header
+
+.signin-signup .main-content__wrapper {
+    margin-top: 10em;
+}
+
+.signin-signup {
     .form {
         max-width: 560px;
         margin-left: auto;
@@ -55,11 +150,86 @@
 
 .btn-secondary {
     @include button($clr-primary, #000);
-
     transition: opacity .2s ease-in-out;
 
     &:focus,
     &:hover {
         opacity: .75;
     }
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    // padding-left: 35px;
+    // margin-bottom: 12px;
+    cursor: pointer;
+    // font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox__checkmark {
+    position: relative;
+    // top: 0;
+    // left: 0;
+    margin-right: 8px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #000;
+    transition: background .2s ease-in-out;
+}
+
+.checkbox:hover input ~ .checkbox__checkmark {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.checkbox input:checked ~ .checkbox__checkmark {
+    background-color: #000;
+}
+
+.checkbox__checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.checkbox input:checked ~ .checkbox__checkmark:after {
+    display: block;
+}
+
+.checkbox .checkbox__checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.signin-signup .form div:last-child {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-signup .form div:last-child button,
+.signin-signup .form div:last-child a {
+    margin-right: 1em;
+    padding: .25em 2em;
 }

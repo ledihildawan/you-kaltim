@@ -97,8 +97,18 @@
     window.addEventListener('scroll', (event) => {
         if (window.pageYOffset >= 80) {
             mainHeader.classList.add('fixed');
+            
+            menuLinks.forEach((menuLink) => {
+                menuLink.addEventListener('mouseover', () => {
+                    menuLink.closest('.main-nav').classList.add('fixed');
+                });
+        
+                menuLink.addEventListener('mouseout', () => {
+                    menuLink.closest('.main-nav').classList.remove('fixed');
+                });
+            });
         } else {
             mainHeader.classList.remove('fixed');
         }
-    })
+    });
 })();
