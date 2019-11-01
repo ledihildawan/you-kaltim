@@ -3171,6 +3171,40 @@ p {
   background: red;
 }
 
+.home .main-header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to bottom, #000000 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.featured-articles__list {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.featured-articles__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.featured-articles__image {
+  width: 100%;
+  -o-object-fit: center;
+     object-fit: center;
+}
+
+.featured-articles__list .slick-dots {
+  bottom: 25px;
+}
+
+.featured-articles__list .slick-dots li button::before {
+  content: '';
+  background: #13D85E;
+}
+
 .signin-signup {
   background: #fff;
   color: #000;
