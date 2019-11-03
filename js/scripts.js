@@ -49,6 +49,51 @@
             });
         });
     } catch (error) {}
+
+    try {
+        const mainHeader = document.querySelector('header.main-header');
+        const teams = document.querySelector('.teams');
+        const teamModal = document.querySelector('.team-modal');
+        const teamModalTitle = document.querySelector('.team-modal__title');
+        const teamModalAboutMe = document.querySelector('.team-modal__aboutme');
+        const teamCloseIcon = document.querySelector('.team-modal__close');
+        const teamCloseIconForm = document.querySelector('.team-modal__form-close');
+        const teamModalEmail = document.querySelector('#teamModalEmail');
+        const teamModalFormWrapper = document.querySelector('.team-modal__form-wrapper');
+        
+        teams.addEventListener('click', (event) => {
+            if (event.target.parentElement.classList.contains('team')) {
+                teamModalStyle = teamModal.style.backgroundImage.split('), u');
+        
+                const name = event.target.parentElement.querySelector('.team__name').textContent;
+                const aboutMe = event.target.parentElement.dataset.aboutmeTeamModal;
+                const backgroundUrl = event.target.parentElement.dataset.bgTeamModal;
+                const background = `url('${backgroundUrl}');`;
+                const overlay = teamModalStyle[0] + '),';
+        
+                teamModal.classList.add('active');
+                teamModalTitle.textContent = name;
+                teamModalAboutMe.textContent = aboutMe;
+                teamModal.style.cssText = `background-image: ${overlay} ${background}`;
+
+                mainHeader.classList.remove('fixed');
+            }
+        });
+        
+        teamCloseIcon.addEventListener('click', () => {
+            teamModal.classList.remove('active');
+            mainHeader.classList.add('fixed');
+        });
+        
+        teamCloseIconForm.addEventListener('click', () => {
+            teamModalFormWrapper.classList.remove('active');
+        });
+        
+        teamModalEmail.addEventListener('click', (event) => {
+            event.preventDefault();
+            teamModalFormWrapper.classList.add('active');
+        });
+    } catch (error) {}
     
     try {
         const mainHeader = document.querySelector('header.main-header');
@@ -75,9 +120,23 @@
             }
         });
 
+        let trackRelativeNavbar;
         window.addEventListener('scroll', (event) => {
+            console.log(trackRelativeNavbar);
+
+            if (window.pageYOffset < 80) {
+                if (trackRelativeNavbar) {
+                    mainHeader.classList.add('relative', 'bg');
+                }
+            }
+
             if (window.pageYOffset >= 80) {
                 mainHeader.classList.add('fixed');
+
+                if (mainHeader.classList.contains('relative', 'bg')) {
+                    mainHeader.classList.remove('relative', 'bg');
+                    trackRelativeNavbar = true;
+                }
                 
                 menuLinks.forEach((menuLink) => {
                     menuLink.addEventListener('mouseover', () => {
@@ -95,6 +154,36 @@
                 mainHeader.classList.remove('fixed');
                 logoImage.src = "images/logo%20(3).png";
                 document.querySelector('.search').setAttribute('style', '');
+            }
+        });
+    } catch (error) {}
+
+    try {
+        const mobileMenu = document.querySelector('.menu-mobile');
+        const mobileMenuToggle = document.querySelector('.main-nav__toggle');
+        const menuMobileClose = document.querySelector('.menu-mobile__close');
+
+        mobileMenuToggle.addEventListener('click', function () {
+            mobileMenu.classList.add('active');
+        });
+
+        menuMobileClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+    } catch (error) {}
+
+    try {
+        const search = document.querySelector('.search');
+        const searchPopup = document.querySelector('.search-popup');
+        const searchPopupWrapper = document.querySelector('.search-popup__wrapper');
+
+        search.addEventListener('click', () => {
+            searchPopup.classList.add('active');
+        });
+
+        document.body.addEventListener('click', (e) => {
+            if (e.target.classList.contains('search-popup__wrapper')) {
+                searchPopup.classList.remove('active');
             }
         });
     } catch (error) {}

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="sass/main.css">
 </head>
 <body class="space">
-    <header class="main-header">
+    <header class="main-header relative bg">
         <div class="container">
             <div class="main-header__wrapper">
                 <div class="main-header__logo logo">
@@ -21,20 +21,43 @@
                 </div>
                 <nav class="main-nav">
                     <ul class="main-nav__list menu-list">
+                        <li class="menu-list__item">
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="connect.html">Connect</a>
+                        </li>
                         <li class="menu-list__item active">
-                            <a href="#">Home</a>
+                            <a href="space.html">Space</a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="#">About</a>
+                            <a href="signin.html">Collaborate</a>
                         </li>
-                        <li class="menu-list__item">
-                            <a href="#">Connect</a>
+                    </ul>
+                </nav>
+                <button class="main-nav__toggle">
+                    Menu Mobile
+                </button>
+                <nav class="menu-mobile">
+                    <div class="menu-mobile__close"></div>
+                    <ul class="menu-mobile__list">
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="home.html">Home</a>
                         </li>
-                        <li class="menu-list__item">
-                            <a href="#">Space</a>
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="about.html">About</a>
                         </li>
-                        <li class="menu-list__item">
-                            <a href="#">Collaborate</a>
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="connect.html">Connect</a>
+                        </li>
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="space.html">Space</a>
+                        </li>
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="signin.html">Collaborate</a>
                         </li>
                     </ul>
                 </nav>
@@ -65,15 +88,15 @@
         <section class="section space__intro" style="background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 7)), url('images/space-intro-bg.jpg');">
             <ul class="space__choices choices">
                 <li class="choices__item facilities" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url('images/space-facilities.jpg');">
-                    <a class="choices__link" href="#">Facilities</a>
+                    <a class="choices__link" href="space-facilities.html">Facilities</a>
                 </li>
                 <li class="choices__item events" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('images/space-events.jpg');">
-                    <a class="choices__link" href="#">Events</a>
+                    <a class="choices__link" href="space-events.html">Events</a>
                 </li>
             </ul>
         </section>
 
-        <div class="section you-space-grid">
+        <!-- <div class="section you-space-grid">
             <div class="you-space-grid__item">
                 <div class="you-space-grid__bg" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url('images/space-you-coffee.jpg');"></div>
                 <a href="#" class="you-space-grid__link">You Coffee</a>
@@ -90,9 +113,9 @@
                 <div class="you-space-grid__bg" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url('images/space-main-space.jpg');"></div>
                 <a href="#" class="you-space-grid__link">Main Space</a>
             </div>
-        </div>
+        </div> -->
 
-        <section class="section space__report-upcoming" style="background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 7)), url('images/space-intro-bg.jpg');">
+        <!-- <section class="section space__report-upcoming" style="background-image: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, 7)), url('images/space-intro-bg.jpg');">
             <ul class="space__choices choices">
                 <li class="choices__item report" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url('images/space-events.jpg');">
                     <a class="choices__link" href="#">Events
@@ -103,8 +126,19 @@
                     <br>Event</a>
                 </li>
             </ul>
-        </section>
+        </section> -->
     </main>
+
+    <div class="search-popup">
+        <div class="search-popup__wrapper">
+            <form action="#" class="search-popup__form">
+                <input type="search" class="search-popup__input" placeholder="Type and hit Enter">
+                <button class="search-popup__btn" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <div style="margin-bottom: 10000px;"></div> -->
 
     <script src="js/jquery.js"></script>
     <script src="js/slick.js"></script>

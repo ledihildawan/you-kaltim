@@ -1,5 +1,4 @@
 .article {
-    color: #000;
     background: #fff;
 }
 
@@ -22,6 +21,7 @@
 .article__meta {
     position: absolute;
     top: 50%;
+    color: #000;
     transform: translateY(-50%);
 }
 
@@ -29,6 +29,10 @@
     line-height: 1.25em;
     font-size: 3rem;
     letter-spacing: 2px;
+}
+
+.article__content {
+    color: #000;
 }
 
 .featured {

@@ -29,3 +29,63 @@
     content: '';
     background: $clr-primary;
 }
+
+.search-popup {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0 , 0, 0, .95);
+    transition: opacity .2s ease-in-out;
+}
+
+.search-popup.active {
+    opacity: 1;
+    z-index: 99999;
+    visibility: visible;
+}
+
+.search-popup ::placeholder {
+    text-align: left;
+}
+
+.search-popup__wrapper {
+    padding-top: 8em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.search-popup__form {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    width: 50%;
+}
+
+.search-popup__input {
+    background: rgba(255,255,255,.75);
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.search-popup__btn {
+    @include button($clr-primary, #fff);
+    border: 0;
+    padding: 1rem;
+    transition: opacity .2s ease-in-out;
+
+    &:focus,
+    &:hover {
+        opacity: .75;
+    }
+}

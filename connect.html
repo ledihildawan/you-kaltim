@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="sass/main.css">
 </head>
-<body class="intro">
+<body class="connect">
     <header class="main-header">
         <div class="container">
             <div class="main-header__wrapper">
@@ -21,20 +21,43 @@
                 </div>
                 <nav class="main-nav">
                     <ul class="main-nav__list menu-list">
+                        <li class="menu-list__item">
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li class="menu-list__item">
+                            <a href="about.html">About</a>
+                        </li>
                         <li class="menu-list__item active">
-                            <a href="#">Home</a>
+                            <a href="connect.html">Connect</a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="#">About</a>
+                            <a href="space.html">Space</a>
                         </li>
                         <li class="menu-list__item">
-                            <a href="#">Connect</a>
+                            <a href="signin.html">Collaborate</a>
                         </li>
-                        <li class="menu-list__item">
-                            <a href="#">Space</a>
+                    </ul>
+                </nav>
+                <button class="main-nav__toggle">
+                    Menu Mobile
+                </button>
+                <nav class="menu-mobile">
+                    <div class="menu-mobile__close"></div>
+                    <ul class="menu-mobile__list">
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="home.html">Home</a>
                         </li>
-                        <li class="menu-list__item">
-                            <a href="#">Collaborate</a>
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="about.html">About</a>
+                        </li>
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="connect.html">Connect</a>
+                        </li>
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="space.html">Space</a>
+                        </li>
+                        <li class="menu-mobile__item">
+                            <a class="menu-mobile__link" href="signin.html">Collaborate</a>
                         </li>
                     </ul>
                 </nav>
@@ -83,6 +106,15 @@
             </ul>
         </section>
     </main>
+
+    <div class="search-popup">
+        <div class="search-popup__wrapper">
+            <form action="#" class="search-popup__form">
+                <input type="search" class="search-popup__input" placeholder="Type and hit Enter">
+                <button class="search-popup__btn" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
 
     <div style="padding-bottom: 2000px;"></div>
 

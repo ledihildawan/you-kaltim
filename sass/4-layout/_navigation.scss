@@ -45,6 +45,10 @@
     border-bottom: 2px solid #fff;
     padding: .25em 0;
     transition: border-color .2s ease-in-out;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
 }
 
 .main-nav.hover {

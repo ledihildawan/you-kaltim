@@ -1,7 +1,7 @@
 .main-header {
     padding: 2em 0 1.5em;
     position: absolute;
-    z-index: 999999999;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
@@ -24,15 +24,33 @@
     background: #000;
 }
 
+.main-header.relative {
+    position: relative;
+}
+
+.main-header.bg {
+    background-color: #000;
+}
+
 .logo {
     &__image {
         width: 128px;
         height: 128px;
         border-radius: 100%;
+        transition: opacity .2s ease-in-out;
+
+        &:focus,
+        &:hover {
+            opacity: .75;
+        }
     }
 }
 
 .main-header__addons {
+    @media (max-width: 767px) {
+        display: none;
+    }
+
     img {
         border-radius: 100%;
     }
@@ -40,6 +58,12 @@
 
 .search {
     margin-right: 1em;
+    transition: opacity .2s ease-in-out;
+
+    &:focus,
+    &:hover {
+        opacity: .75;
+    }
 }
 
 .languages-switch a:last-child {
@@ -54,6 +78,12 @@
     border-radius: 100%;
     text-indent: -999999999px;
     overflow: hidden;
+    transition: opacity .2s ease-in-out;
+
+    &:focus,
+    &:hover {
+        opacity: .75;
+    }
 }
 
 #bahasaIndonesia {
