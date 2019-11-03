@@ -3012,7 +3012,7 @@ p {
   height: 48px;
   width: 48px;
   text-indent: -999999999px;
-  background: url("images/search-icon-white.svg") center/contain no-repeat;
+  background: url("../images/search-icon-white.svg") center/contain no-repeat;
 }
 
 .search__form {
