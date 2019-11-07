@@ -23,18 +23,19 @@
     }
 }
 
+// .main-header.relative {
+    // position: relative;
+    // background: #000;
+// }
+
 .main-header.fixed {
     position: fixed;
     top: 0;
     background: #000;
 }
 
-.main-header.relative {
-    position: relative;
-}
-
 .main-header.bg {
-    background-color: #000;
+    background: #000;
 }
 
 .logo {
@@ -97,11 +98,11 @@
 }
 
 #bahasaIndonesia {
-    background: url('images/Flag-Indonesia.jpg') center/cover no-repeat;
+    background: url('../images/Flag-Indonesia.jpg') center/cover no-repeat;
 }
 
 #english {
-    background: url('images/Flag-United-States-of-America.jpg') center/cover no-repeat;
+    background: url('../images/Flag-United-States-of-America.jpg') center/cover no-repeat;
 }
 
 .search {

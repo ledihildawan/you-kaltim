@@ -76,6 +76,7 @@
         const mainHeader = document.querySelector('header.main-header');
         const teams = document.querySelector('.teams');
         const teamModal = document.querySelector('.team-modal');
+        const teamModalWrapper = document.querySelector('.team-modal__wrapper');
         const teamCloseIcon = document.querySelector('.team-modal__close');
         const teamModalTitle = document.querySelector('.team-modal__title');
         const teamModalAboutMe = document.querySelector('.team-modal__aboutme');
@@ -86,18 +87,18 @@
         
         teams.addEventListener('click', (event) => {
             if (event.target.parentElement.classList.contains('team')) {
-                teamModalStyle = teamModal.style.backgroundImage.split('), u');
+                teamModalWrapperStyle = teamModalWrapper.style.backgroundImage.split('), u');
         
                 const name = event.target.parentElement.querySelector('.team__name').textContent;
                 const aboutMe = event.target.parentElement.dataset.aboutmeTeamModal;
                 const backgroundUrl = event.target.parentElement.dataset.bgTeamModal;
                 const background = `url('${backgroundUrl}');`;
-                const overlay = teamModalStyle[0] + '),';
+                const overlay = teamModalWrapperStyle[0] + '),';
         
                 teamModal.classList.add('active');
                 teamModalTitle.textContent = name;
                 teamModalAboutMe.textContent = aboutMe;
-                teamModal.style.cssText = `background-image: ${overlay} ${background}`;
+                teamModalWrapper.style.cssText = `background-image: ${overlay} ${background}`;
                 teamModalLink.href = `mailto:${event.target.parentElement.dataset.email}`;
 
                 mainHeader.classList.remove('fixed');
@@ -108,10 +109,15 @@
             teamModal.classList.remove('active');
             mainHeader.classList.add('fixed');
         });
-        
-        teamCloseIconForm.addEventListener('click', () => {
-            teamModalFormWrapper.classList.remove('active');
+
+        teamModal.addEventListener('click', () => {
+            teamModal.classList.remove('active');
+            mainHeader.classList.add('fixed');
         });
+        
+        // teamCloseIconForm.addEventListener('click', () => {
+        //     teamModalFormWrapper.classList.remove('active');
+        // });
         
         // teamModalEmail.addEventListener('click', (event) => {
         //     event.preventDefault();
@@ -144,9 +150,9 @@
             }
         });
 
-        let trackRelativeNavbar;
+        // let trackRelativeNavbar;
         window.addEventListener('scroll', (event) => {
-            console.log(trackRelativeNavbar);
+            // console.log(trackRelativeNavbar);
 
             // if (window.pageYOffset < 80) {
             //     if (trackRelativeNavbar) {

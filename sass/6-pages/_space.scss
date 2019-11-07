@@ -235,7 +235,7 @@
 }
 
 .upcomming-events-modal__content.active {
-    max-height: 1920px;
+    max-height: 2560px;
     padding-bottom: 3.5em;
 }
 
@@ -252,7 +252,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 3.5em 0 .5em;
+    padding: 3em 0 .5em;
     background: linear-gradient(to bottom, rgba(255, 255, 255, .75), rgba(255, 255, 255, 1));
     text-align: center;
     margin-bottom: 0 !important;
@@ -279,11 +279,11 @@
     right: 20px;
     height: 24px;
     width: 24px;
-    background: url('images/close-button-white.svg') center/cover no-repeat;
+    background: url('../images/close-button-white.svg') center/cover no-repeat;
     cursor: pointer;
 
     &:focus,
     &:hover {
-        background: url('images/close-button-red.svg') center/cover no-repeat;
+        background: url('../images/close-button-red.svg') center/cover no-repeat;
     }
 }

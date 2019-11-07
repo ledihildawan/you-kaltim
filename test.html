@@ -5,26 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="/sass/main.css"> -->
+    <!-- <link rel="stylesheet" href="sass/main.css"> -->
     <link rel="stylesheet" href="js/slick.css">
     <link rel="stylesheet" href="js/slick-theme.css">
+    <link rel="stylesheet" href="sass/main.css">
 
     <style>
-    img {
+    /* img {
         width: 100%;
-    }
+    } */
     </style>
 </head>
 <body>
-    <div class="projects">
-        <img src="images/project-1.jpg" alt="">
-        <img src="images/project-2.jpg" alt="">
-        <img src="images/project-3.jpg" alt="">
-        <img src="images/project-4.jpg" alt="">
-        <img src="images/project-5.jpg" alt="">
-        <img src="images/project-6.jpg" alt="">
-        <img src="images/project-7.jpg" alt="">
-        <img src="images/project-8.jpg" alt="">
+    <div class="team-modal">
+        <div class="team-modal__wrapper" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('images/brooke-cagle-NoRsyXmHGpI-unsplash.jpg');">
+            <div class="team-modal__close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
+            <div class="team-modal__content">
+                <p class="team-modal__title">Team 1</p>
+                <p class="team-modal__aboutme">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam magni, accusamus a iusto libero accusantium perspiciatis, laborum vero corrupti vitae itaque? Debitis dignissimos veritatis facilis recusandae error voluptatibus eligendi inventore.</p>
+                <ul class="team-modal__social-list">
+                    <li class="team-modal__social-item">
+                        <a class="team-modal__link" href="#" id="teamModalEmail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span class="visually-hidden">Email</span>
+                        </a>
+                    </li>
+                    <li class="team-modal__social-item">
+                        <a class="team-modal__link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                            <span class="visually-hidden">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="team-modal__social-item">
+                        <a class="team-modal__link" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg>
+                            <span class="visually-hidden">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script src="js/jquery.js"></script>

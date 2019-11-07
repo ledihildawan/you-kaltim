@@ -1,10 +1,61 @@
+.article .main-header {
+    background: #000;
+}
+
+.article .main-header .main-nav {
+    border-top: 2px solid $clr-primary;
+    border-bottom: 2px solid $clr-primary;
+    padding: .25em 0;
+    transition: border-color .2s ease-in-out;
+}
+
+.article .main-header .main-nav.fixed {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.article .main-header .menu-list {
+    &:hover .menu-list__item a:not(:hover) {
+        color: $clr-primary;
+    }
+
+    .menu-list__item {
+        &:not(:first-child) {
+            margin-left: 1em;
+        }
+
+        a {
+            color: $clr-primary;
+            transition: color .2s ease-in-out;
+
+            &:focus,
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .menu-list__item.active {
+        color: #fff;
+
+        a {
+            color: inherit;
+        }
+    }
+}
+
+.article .search {
+    background: url('../images/search-icon-green.svg') center/contain no-repeat;
+}
+
 .article {
     background: #fff;
+    padding-top: 5.15em;
 }
 
 .article__header {
     position: relative;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 .article__content {
@@ -63,11 +114,14 @@
     object-fit: cover;
 }
 
-.article-categories {
+.article-category {
     position: relative;
+    display: flex;
+    width: 100%;
+    height: 320px;
 }
 
-.article-categories__overlay {
+.article-category__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -76,16 +130,21 @@
     background: rgba(0, 0, 0, .7);
 }
 
-.article-categories {
-    display: flex;
+.article-category__item {
+    height: 100%;
     width: 100%;
-    height: 500px;
+    background: center/cover no-repeat;
 }
 
-.article-category {
-    height: 100%;
-    width: calc(100% / 4);
-    background: center/cover no-repeat;
+.article-category__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-shadow: 2px 4px 8px rgba(0 , 0, 0, .37);
 }
 
 .author {

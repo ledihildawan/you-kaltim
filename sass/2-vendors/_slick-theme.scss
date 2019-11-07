@@ -42,7 +42,7 @@ $slick-opacity-not-active: 0.25 !default;
 /* Slider */
 .slick-list {
     .slick-loading & {
-        background: #fff url("images/ajax-loader.gif") center center no-repeat;
+        background: #fff url("../images/ajax-loader.gif") center center no-repeat;
     }
 }
 
@@ -50,8 +50,8 @@ $slick-opacity-not-active: 0.25 !default;
 @if $slick-font-family == "slick" {
     @font-face {
         font-family: "slick";
-        src: src("fonts/slick.eot");
-        src: src("fonts/slick.eot?#iefix") format("embedded-opentype"), src("fonts/slick.woff") format("woff"), src("fonts/slick.ttf") format("truetype"), src("fonts/slick.svg#slick") format("svg");
+        src: src("../fonts/slick.eot");
+        src: src("../fonts/slick.eot?#iefix") format("embedded-opentype"), src("../fonts/slick.woff") format("woff"), src("../fonts/slick.ttf") format("truetype"), src("../fonts/slick.svg#slick") format("svg");
         font-weight: normal;
         font-style: normal;
     }
