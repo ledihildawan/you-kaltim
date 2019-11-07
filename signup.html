@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/sass/main.css">
 </head>
-<body class="signin-signup">
+<body class="signin-signup signup">
     <header class="main-header">
         <div class="container">
             <div class="main-header__wrapper">
@@ -98,21 +98,54 @@
                     Hey! You
                 </legend>
                 <div class="form__group">
-                    <label for="username" class="visually-hidden">Username</label>
-                    <input type="text" class="form__control" id="username" name="username" placeholder="Username">
+                    <label for="fullname" class="visually-hidden">Full Name</label>
+                    <input type="text" class="form__control" id="fullname" name="fullname" placeholder="Full Name">
+                </div>
+                <div class="form__group">
+                    <label for="male">
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+                    <label for="femalre">
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                </div>
+                <div class="form__group">
+                    <label for="phoneNumber" class="visually-hidden">Phone Number</label>
+                    <input type="tel" class="form__control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+                </div>
+                <div class="form__group">
+                    <label for="fullname" class="visually-hidden">Email</label>
+                    <input type="email" class="form__control" id="email" name="email" placeholder="Email">
                 </div>
                 <div class="form__group">
                     <label for="password" class="visually-hidden">Password</label>
                     <input type="password" class="form__control" id="password" name="password" placeholder="Password">
                 </div>
-                <div class="form__addons">
-                    <label class="checkbox" for="rememberMe">
-                        <input type="checkbox" id="rememberMe" name="rememberMe">
-                        <span class="checkbox__checkmark"></span>
-                        Remember Me
+                <div class="form__group">
+                    <label for="password2" class="visually-hidden">Confirm Password</label>
+                    <input type="password" class="form__control" id="password2" name="password2" placeholder="Confirm Password">
+                </div>
+                <div class="form__group">
+                    <label for="kota">Kota</label>
+                    <select name="kota" id="kota">
+                        <option value="">- Select a value-</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="subscribe" class="checkbox">
+                        <input type="checkbox" name="subscribe" id="subscribe">
+                        <div class="checkbox__checkmark"></div>
+                        Subscribe Community Hub
                     </label>
-
-                    <a href="#" class="form__link">Forgot Password?</a>
+                </div>
+                <div class="form__group">
+                    <label for="agree" class="checkbox">
+                        <input type="checkbox" name="agree" id="agree">
+                        <div class="checkbox__checkmark"></div>
+                        I agree with the website's terms and conditions
+                    </label>
                 </div>
                 <div class="form__group">
                     <button type="submit" class="btn-primary">Login</button>

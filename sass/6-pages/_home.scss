@@ -1,24 +1,76 @@
-.home .main-header {
-    background-image: linear-gradient(to bottom,#000000 0%,rgba(255,255,255,0) 100%);
-}
-
-.featured-articles__list {
-    position: relative;
+.home {
     height: 100vh;
     overflow: hidden;
 }
 
-.featured-articles__overlay {
+// .home .main-header {
+//     background-image: linear-gradient(to bottom,#000000 0%,rgba(255,255,255,0) 100%);
+// }
+
+.featured-articles__list {
+    position: relative;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.featured-articles__item {
+    height: 100vh;
+    position: relative;
+}
+
+// .featured-articles__overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(0 , 0, 0, .37);
+//     z-index: 2;
+// }
+
+.featured-articles__image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: top center;
 }
 
-.featured-articles__image {
-    width: 100%;
-    object-fit: center;
+.featured-articles__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0 , 0, 0, .95), rgba(0 , 0, 0, .37));
+    position: relative;
+    z-index: 3;
+}
+
+.featured-articles__title {
+    text-align: center;
+    width: 50%;
+    font-size: 2.8rem;
+    line-height: 1.125em;
+    text-shadow: 2px 4px 8px rgba(0 , 0, 0, .37);
+    text-transform: uppercase;
+}
+
+.featured-articles__cta {
+    position: absolute;
+    right: 4em;
+    bottom: 3em;
+    @include button(#000, $clr-primary);
+    transition: background .2s ease-in-out, color;
+
+    &:focus,
+    &:hover {
+        background: red;
+        color: #fff;
+    }
 }
 
 .featured-articles__list .slick-dots {
@@ -30,62 +82,78 @@
     background: $clr-primary;
 }
 
-.search-popup {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    background: rgba(0 , 0, 0, .95);
-    transition: opacity .2s ease-in-out;
-}
+// .search-popup {
+//     opacity: 0;
+//     visibility: hidden;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     background: rgba(0 , 0, 0, .95);
+//     transition: opacity .2s ease-in-out;
+// }
 
-.search-popup.active {
-    opacity: 1;
-    z-index: 99999;
-    visibility: visible;
-}
+// .search-popup__close {
+//     cursor: pointer;
+//     position: absolute;
+//     top: 24px;
+//     right: 24px;
+//     height: 16px;
+//     width: 16px;
+//     background: url('images/close-button-white.svg') center/cover no-repeat;
+//     transition: all .2s ease-in-out;
 
-.search-popup ::placeholder {
-    text-align: left;
-}
+//     &:focus,
+//     &:hover {
+//         background: url('images/close-button-red.svg') center/cover no-repeat;
+//     }
+// }
 
-.search-popup__wrapper {
-    padding-top: 8em;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
+// .search-popup.active {
+//     opacity: 1;
+//     z-index: 99999;
+//     visibility: visible;
+// }
 
-.search-popup__form {
-    position: relative;
-    z-index: 100;
-    display: flex;
-    width: 50%;
-}
+// .search-popup ::placeholder {
+//     text-align: left;
+// }
 
-.search-popup__input {
-    background: rgba(255,255,255,.75);
-    border: 0;
-    outline: 0;
-    width: 100%;
-    padding: 1rem;
-    text-transform: uppercase;
-}
+// .search-popup__wrapper {
+//     padding-top: 8em;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: flex-start;
+// }
 
-.search-popup__btn {
-    @include button($clr-primary, #fff);
-    border: 0;
-    padding: 1rem;
-    transition: opacity .2s ease-in-out;
+// .search-popup__form {
+//     position: relative;
+//     z-index: 100;
+//     display: flex;
+//     width: 50%;
+// }
 
-    &:focus,
-    &:hover {
-        opacity: .75;
-    }
-}
+// .search-popup__input {
+//     background: rgba(255,255,255,.75);
+//     border: 0;
+//     outline: 0;
+//     width: 100%;
+//     padding: 1rem;
+//     text-transform: uppercase;
+// }
+
+// .search-popup__btn {
+//     @include button($clr-primary, #fff);
+//     border: 0;
+//     padding: 1rem;
+//     transition: opacity .2s ease-in-out;
+
+//     &:focus,
+//     &:hover {
+//         opacity: .75;
+//     }
+// }

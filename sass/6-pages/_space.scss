@@ -1,15 +1,23 @@
-.space .section {
-    padding: 0;
-}
-
 .space__intro,
 .space__report-upcoming {
-    height: 100vh;
+    min-height: 100vh;
     background: center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.space__intro {
+    padding-top: 12em;
+}
+
+.space-facilities__intro {
+    padding: 12em 0 3em;
+}
+
+.space-events__intro {
+    padding: 12em 0 3em;
 }
 
 .choices {
@@ -52,14 +60,15 @@
 }
 
 .you-space-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
 }
 
 .you-space-grid__item {
     position: relative;
     flex: 1 0 50%;
-    height: 250px;
+    height: calc(100vh / 2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,10 +88,10 @@
     transform: scale(1.5);
 }
 
-.you-space-grid__item:first-child .you-space-grid__link,
-.you-space-grid__item:last-child .you-space-grid__link {
-    color: #000;
-}
+// .you-space-grid__item:first-child .you-space-grid__link,
+// .you-space-grid__item:last-child .you-space-grid__link {
+//     color: #000;
+// }
 
 .you-space-grid__bg {
     position: absolute;
@@ -124,4 +133,157 @@
     background: center/cover no-repeat;
     text-transform: uppercase;
     letter-spacing: 4px;
+    transition: opacity .2s ease-in-out;
+
+    &:focus,
+    &:hover {
+        opacity: .75;
+    }
+}
+
+.grid-3x3__link {
+    font-size: 2rem;
+    line-height: 1.6em;
+}
+
+.grid-3x3__item:hover .grid-3x3__link {
+    opacity: 1;
+}
+
+.space-events-reports {
+    padding: 12em 0 3em;
+}
+
+.upcomming-events-modal {
+    opacity: 0;
+    visibility: hidden;
+    // z-index: 1000;
+    color: #000;
+    position: fixed;
+    overflow-y: scroll;
+    // overflow-x: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+    scrollbar-width: none;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    transition: opacity .2s ease-in;
+}
+
+.upcomming-events-modal.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+}
+
+.upcomming-events-modal::-webkit-scrollbar { 
+    display: none; 
+}
+
+.upcomming-events-modal__wrapper {
+    // position: relative;
+    max-width: 720px;
+    margin: 4em auto;
+    width: 100%;
+    background: #fff;
+    padding: 1em;
+}
+
+.upcomming-events-modal__title {
+
+}
+
+.upcomming-events-modal__meta {
+    font-size: .8rem;
+    color: #5a5a5a;
+}
+
+.upcomming-events-modal__separator {
+    margin: 0 .5em;
+    color: #ddd;
+}
+
+.upcomming-events-modal__poster {
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+
+.upcomming-events-modal__poster img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.upcomming-events-modal__content {
+    position: relative;
+    font-size: .975rem;
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height .4s ease-in-out, padding-bottom .4s ease-in-out;
+
+    p {
+        margin-bottom: .2em;
+    }
+
+    ul {
+        padding-left: 1.25em;
+    }
+}
+
+.upcomming-events-modal__content.active {
+    max-height: 1920px;
+    padding-bottom: 3.5em;
+}
+
+.upcomming-events-modal__showmore {
+    color: #555;
+    font-size: .8rem;
+    font-weight: 700;
+    display: block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3.5em 0 .5em;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .75), rgba(255, 255, 255, 1));
+    text-align: center;
+    margin-bottom: 0 !important;
+    outline: 0;
+    appearance: none;
+    transition: color .2s ease-in-out;
+
+    &:focus,
+    &:hover {
+        outline: 0;
+        color: #777;
+    }
+}
+
+.upcomming-events-modal__showmore {
+    span {
+        margin-right: .25em;
+    }
+}
+
+.upcomming-events-modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 24px;
+    width: 24px;
+    background: url('images/close-button-white.svg') center/cover no-repeat;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        background: url('images/close-button-red.svg') center/cover no-repeat;
+    }
 }

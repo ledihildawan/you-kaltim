@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="sass/main.css">
 </head>
 <body class="events" style="background-image: url('images/kaleb-nimz--5rA4DRrEXU-unsplash.jpg');">
-    <header class="main-header relative bg">
+    <header class="main-header">
         <div class="container">
             <div class="main-header__wrapper">
                 <div class="main-header__logo logo">
-                    <a href="#" class="logo__link">
+                    <a href="home.html" class="logo__link">
                         <img src="images/logo (3).png" alt="youkaltim logo" class="logo__image">
                     </a>
                 </div>
@@ -64,8 +64,8 @@
                 <div class="main-header__addons">
                     <div class="search">
                         <form action="#" class="search__form">
-                            <input type="serach" class="search__input">
-                            <button class="search__btn">Cari</button>
+                            <input type="serach" class="search__input" placeholder="Search..">
+                            <button class="search__btn">GO!</button>
                         </form>
                     </div>
                     <div class="languages-switch">
@@ -84,10 +84,10 @@
     <main class="main-content">
         <h1 class="visually-hidden">YOU Kaltim</h1>
         
-        <section class="section space__report-upcoming">
+        <section class="section space__report-upcoming space-events__intro">
             <ul class="space__choices choices">
                 <li class="choices__item report" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url('images/space-events.jpg');">
-                    <a class="choices__link" href="#">Events
+                    <a class="choices__link" href="space-events-list-article.html">Events
                     <br>Report</a>
                 </li>
                 <li class="choices__item upcoming" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('images/space-facilities.jpg');">
@@ -98,16 +98,85 @@
         </section>
     </main>
 
-    <div class="search-popup">
+    <!-- <div class="search-popup">
+        <div class="search-popup__close"></div>
         <div class="search-popup__wrapper">
             <form action="#" class="search-popup__form">
                 <input type="search" class="search-popup__input" placeholder="Type and hit Enter">
                 <button class="search-popup__btn" type="submit">Search</button>
             </form>
         </div>
+    </div> -->
+
+    <div class="upcomming-events-modal">
+        <div class="upcomming-events-modal__wrapper">
+            <div class="upcomming-events-modal__close"></div>
+            <h3 class="upcomming-events-modal__title">Exposure 2019 : Beauty in A Glimpse of Light</h3>
+            <p class="upcomming-events-modal__meta">
+                <span class="upcomming-events-modal__date">
+                    <i class="far fa-calendar-alt"></i> 9 November 2019
+                </span>
+                <span class="upcomming-events-modal__separator">|</span>
+                <span class="upcomming-events-modal__location">
+                    <i class="fas fa-map-marker-alt"></i> Prathivi Studio Building, Jakarta
+                </span>
+            </p>
+            <div class="upcomming-events-modal__poster">
+                <img src="images/MP-Exposure-LFS-FEB-UI-Copy.jpg" alt="">
+            </div>
+            <div class="upcomming-events-modal__content">
+                <p><b>Exposure 2019 : Beauty in A Glimpse of Light</b></p>
+                <p><strong>Tanggal</strong>: 9 November 2019</p>
+                <p><strong>Tempat</strong>: Prathivi Studio Building, Jakarta</p>
+                <p><b>Dekskripsi Event</b>:</p>
+                <p>LFS FEB UI dengan bangga mempersembahkan dengan tema “Beauty in a Glimpse of Light”, Exposure 2019 terdiri dari tiga rangkaian acara yaitu: Workshop, Competition, dan Exhibition.</p>
+                <p><b>Konten Event</b>:</p>
+                <ul>
+                    <li>Workshop</li>
+                    <li>Competition</li>
+                    <li>Exhibition</li>
+                </ul>
+                <p><b>Bersama</b>:</p>
+                <ul>
+                    <li>Hary Subastion
+                        <ul>
+                            <li>Chief Photographer in MRA Media Indonesia</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Salza Annisa P
+                        <ul>
+                            <li>Head of Creative at Sale Stock</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><b>Pendaftaran</b>:</p>
+                <ul>
+                    <li>Biaya Pendaftaran
+                        <ul>
+                            <li>Presale 1 : Rp 160.000</li>
+                            <li>Presale 2 ; Rp 165.000</li>
+                            <li>Presale 3 : Rp 185.000</li>
+                        </ul>
+                    </li>
+                    <li>Link Pendaftaran: <a href="http://goers.co/exposure2019">http://goers.co/exposure2019</a></li>
+                </ul>
+                <p><b>More Information</b>:</p>
+                <ul>
+                    <li>Line@: Line@ : nbj4542k</li>
+                    <li>Instagram: exposure_lfs</li>
+                </ul>
+                <p><strong>This Event Full Supported by EVENTJAKARTA</strong></p>
+
+                <button class="upcomming-events-modal__showmore">
+                    <span>More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
     </div>
 
-    <div style="margin-bottom: 10000px;"></div>
+    <!-- <div style="padding-bottom: 1000px;"></div> -->
 
     <script src="js/jquery.js"></script>
     <script src="js/slick.js"></script>

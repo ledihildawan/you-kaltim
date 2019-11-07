@@ -15,6 +15,22 @@
 }
 
 .main-nav__toggle {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    background: url('images/list-menu.svg') center/cover no-repeat;
+    text-indent: -9999px;
+    transition: all .2s ease-in-out;
+
+    &:focus,
+    &:hover {
+        background: url('images/list-menu-hover.svg') center/cover no-repeat;
+    }
+
     @media (min-width: 768px) {
         display: none;
     }
@@ -28,10 +44,11 @@
     width: 24px;
     background: url('images/close-button-white.svg') center/cover no-repeat;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 
     &:focus,
     &:hover {
-        background: url('images/close-button-hover.svg') center/cover no-repeat;
+        background: url('images/close-button-red.svg') center/cover no-repeat;
     }
 }
 
@@ -40,7 +57,9 @@
 }
 
 .menu-mobile__item {
-    margin-bottom: 1rem;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #080808;
+    margin-bottom: .5em;
 }
 
 .menu-mobile__link {

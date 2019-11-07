@@ -7,6 +7,11 @@
     width: 100%;
     transition: all .4s ease-in-out;
 
+    @media (max-width: 767px) {
+        background: #000;
+        padding: .5em 0 .2em;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -42,6 +47,11 @@
         &:focus,
         &:hover {
             opacity: .75;
+        }
+
+        @media (max-width: 767px) {
+            width: 64px;
+            height: 64px;
         }
     }
 }
@@ -87,11 +97,11 @@
 }
 
 #bahasaIndonesia {
-    background: url('https://cdn.britannica.com/48/1648-004-644EBE62/Flag-Indonesia.jpg') center/cover no-repeat;
+    background: url('images/Flag-Indonesia.jpg') center/cover no-repeat;
 }
 
 #english {
-    background: url('https://cdn.britannica.com/33/4833-050-0FE70191/Flag-United-States-of-America.jpg') center/cover no-repeat;
+    background: url('images/Flag-United-States-of-America.jpg') center/cover no-repeat;
 }
 
 .search {
@@ -101,12 +111,60 @@
     display: inline-block;
     height: 48px;
     width: 48px;
-    text-indent: -999999999px;
+    // text-indent: -999999999px;
     // overflow: hidden;
     background: url('../images/search-icon-white.svg') center/contain no-repeat;
 }
 
 .search__form {
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
+    top: 64px;
+    right: 0;
+    background: none;
+    display: flex;
+    // border: 2px solid $clr-primary;
+    // border-radius: .5em;
+    // overflow: hidden;
+}
 
+.search__form.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search__form ::placeholder {
+    color: #fff;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.search__input {
+    border: 0;
+    background: none;
+    padding: .5em 1em;
+    outline: 0;
+    color: #fff;
+    border: 2px solid $clr-primary;
+    border-right: 0;
+    border-radius: .5em;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search__btn {
+    @include button($clr-primary, #000);
+    padding: .25em 1em;
+    border: 2px solid $clr-primary;
+    border-left: 0;
+    border-radius: .5em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: opacity .2s;
+
+    &:focus,
+    &:hover {
+        opacity: .75;
+    }
 }

@@ -22,6 +22,7 @@ body {
 }
 
 a {
+    outline: 0;
     color: inherit;
     text-decoration: none;
 }
@@ -37,6 +38,11 @@ main {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+
+    @media (max-width: 1199px) {
+        max-width: unset;
+        padding: 0 15px;
+    }
 }
 
 .section {

@@ -7,6 +7,10 @@ body {
     font-weight: 600;
     font-family: $ff-sans-serif;
     line-height: 1.6em;
+
+    @media (max-width: 1199px) {
+        font-size: 1rem;
+    }
 }
 
 p {

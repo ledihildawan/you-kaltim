@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/sass/main.css">
+
+    <title>About</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="sass/main.css">
 </head>
-<body class="signin-signup">
+<body class="article">
     <header class="main-header">
         <div class="container">
             <div class="main-header__wrapper">
@@ -18,7 +21,7 @@
                 </div>
                 <nav class="main-nav">
                     <ul class="main-nav__list menu-list">
-                        <li class="menu-list__item">
+                        <li class="menu-list__item active">
                             <a href="home.html">Home</a>
                         </li>
                         <li class="menu-list__item">
@@ -30,7 +33,7 @@
                         <li class="menu-list__item">
                             <a href="space.html">Space</a>
                         </li>
-                        <li class="menu-list__item active">
+                        <li class="menu-list__item">
                             <a href="signin.html">Collaborate</a>
                         </li>
                     </ul>
@@ -77,81 +80,46 @@
             </div>
         </div>
     </header>
-
+    
     <main class="main-content">
         <h1 class="visually-hidden">YOU Kaltim</h1>
-        <div class="main-content__wrapper">
-            <!-- <div class="hero" style="background-image: url(/images/nathan-dumlao-6VhPY27jdps-unsplash.jpg);">
-                <div class="hero__overlay"></div>
-                <div class="container">
-                    <div class="hero__content">
-                        <h2 class="hero__title">
-                            <img src="https://via.placeholder.com/256x256" alt="Comming soon you coffee">
-                        </h2>
-                        <a href="#" class="hero__cta">Read More</a>
+
+        <article class="article">
+            <header class="article__header">
+                <div class="featured">
+                    <img src="images/austin-neill-sxxnM-tRlVg-unsplash.jpg" alt="" class="featured__image">
+                </div>
+                <!-- <div class="container">
+                    <div class="article__meta">
+                        <h1 class="article__title">“Musik adalah
+                        <br>bagian dari
+                        <br>hidup saya..””</h1>
+                        <p class="author">
+                            <span class="author__name">Harry Dagu</span>
+                            -
+                            <span class="author__job">Keyboardist REDCHERRY.</span>
+                        </p>
                     </div>
-                </div>
-            </div> -->
+                </div> -->
+            </header>
 
-            <form action="#" class="form">
-                <legend class="form__title">
-                    Hey! You
-                </legend>
-                <div class="form__group">
-                    <label for="username" class="visually-hidden">Username</label>
-                    <input type="text" class="form__control" id="username" name="username" placeholder="Username">
-                </div>
-                <div class="form__group">
-                    <label for="password" class="visually-hidden">Password</label>
-                    <input type="password" class="form__control" id="password" name="password" placeholder="Password">
-                </div>
-                <div class="form__addons">
-                    <label class="checkbox" for="rememberMe">
-                        <input type="checkbox" id="rememberMe" name="rememberMe">
-                        <span class="checkbox__checkmark"></span>
-                        Remember Me
-                    </label>
+            <div class="container">
+                <div class="article__content">
+                    <h1 class="article__title">Musik adalah bagian dari hidup saya</h1>
+                    <p class="article__subtitle">
+                        <em>Harry Dagu</em>
+                        -
+                        Keyboardist REDCHERRY.
+                    </p>
 
-                    <a href="#" class="form__link">Forgot Password?</a>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam reiciendis soluta neque exercitationem aspernatur. Aut dolorem explicabo natus numquam aliquid labore quasi, sit at consequuntur nihil sint repudiandae voluptas dolorum?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, doloremque ipsum, error earum incidunt, expedita fugit numquam dolores eaque deleniti odit voluptates ut architecto consequatur quae! Asperiores pariatur qui molestiae?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae pariatur necessitatibus alias quaerat ea rem, dolores accusantium ipsam ut provident minus laboriosam inventore tempora accusamus! Aspernatur, nemo. Aspernatur, vero perspiciatis.</p>
+                    <iframe src="https://www.youtube.com/embed/y_CXsHlXcYE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="form__group">
-                    <button type="submit" class="btn-primary">Login</button>
-                    <a class="btn-secondary" href="signup.html">Register</a>
-                </div>
-            </form>
-        </div>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="main-footer__wrapper">
-                <address class="main-footer__address">
-                    Jalan Gamelan No. 2
-                    <br>Samarinda, Kalimatan Timur
-                    <br>Indonesia.
-                </address>
-                <p class="main-footer__contact">
-                    <a href="tel:+62 811 4939 898">m: +62 811 4939 898</a>
-                    <a href="tel:+62 541 733 075">p: +62 541 733 075</a>
-                    <a href="mailto:info@youkaltim.id">info@youkaltim.id</a>
-                </p>
-                <ul class="main-footer__social social">
-                    <li class="social__item">
-                        <a href="#" class="social__link">
-                            <span class="social__icon">Facebook</span>
-                            <span class="social__text">YOU Kaltim</span>
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a href="#" class="social__link">
-                            <span class="social__icon">Twitter</span>
-                            <span class="social__text">@youkaltim</span>
-                        </a>
-                    </li>
-                </ul>
             </div>
-        </div>
-    </footer>
+        </article>
+    </main>
 
     <!-- <div class="search-popup">
         <div class="search-popup__close"></div>
@@ -161,7 +129,9 @@
                 <button class="search-popup__btn" type="submit">Search</button>
             </form>
         </div>
-    </div> -->
+    </!-->
+
+    <div style="margin-bottom: 10000px;"></div>
 
     <script src="js/jquery.js"></script>
     <script src="js/slick.js"></script>
