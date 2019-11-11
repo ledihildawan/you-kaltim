@@ -1,0 +1,42 @@
+.pagenav {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+}
+
+.pagenav__list {
+    @include resetList;
+}
+
+.pagenav__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+        margin-right: .5em;
+    }
+}
+
+.pagenav__link {
+    display: block;
+    padding: .25em .75em;
+    background: #000;
+    color: $clr-primary;
+    transition: background .2s linear, color .2s ease-in .15s;
+
+    &:focus,
+    &:hover {
+        background: $clr-primary;
+        color: #000;
+    }
+}
+
+.pagenav__link.active {
+    background: $clr-primary;
+    color: #fff;
+    transition: background .2s linear;
+
+    &:focus,
+    &:hover {
+        background: darken($clr-primary, 8%);
+    }
+}

@@ -53,3 +53,32 @@
     transform: scale(1.5);
     color: $clr-primary;
 }
+
+
+// Inside connect category
+.connect-list-article .main-content {
+    padding-top: 10em;
+}
+
+.connect-list-article {
+    background: #fff;
+    // color: #000;
+}
+
+.connect-list-article .main-header {
+    background: #000;
+}
+
+.connect-list-article__category {
+    position: relative;
+    height: 240px;
+}
+
+.connect-list-article__category-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}

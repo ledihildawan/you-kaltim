@@ -2893,12 +2893,20 @@ main {
   /* added line */
 }
 
+.mb-1 {
+  margin-bottom: 1em;
+}
+
 body {
   color: #fff;
   font-size: 1.25rem;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.6em;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 @media (max-width: 1199px) {
@@ -3461,6 +3469,54 @@ p {
   background: red;
 }
 
+.pagenav {
+  margin-top: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagenav__list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.pagenav__item {
+  display: inline-block;
+}
+
+.pagenav__item:not(:last-child) {
+  margin-right: .5em;
+}
+
+.pagenav__link {
+  display: block;
+  padding: .25em .75em;
+  background: #000;
+  color: #13D85E;
+  -webkit-transition: background .2s linear, color .2s ease-in .15s;
+  transition: background .2s linear, color .2s ease-in .15s;
+}
+
+.pagenav__link:focus, .pagenav__link:hover {
+  background: #13D85E;
+  color: #000;
+}
+
+.pagenav__link.active {
+  background: #13D85E;
+  color: #fff;
+  -webkit-transition: background .2s linear;
+  transition: background .2s linear;
+}
+
+.pagenav__link.active:focus, .pagenav__link.active:hover {
+  background: #10b24e;
+}
+
 .home {
   height: 100vh;
   overflow: hidden;
@@ -3512,18 +3568,17 @@ p {
 }
 
 .featured-articles__title {
+  margin-top: 1em;
   text-align: center;
   width: 50%;
   font-size: 2.8rem;
-  line-height: 1.125em;
+  line-height: 1.25em;
   text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.37);
   text-transform: uppercase;
 }
 
 .featured-articles__cta {
-  position: absolute;
-  right: 4em;
-  bottom: 3em;
+  margin-top: 1.25em;
   cursor: pointer;
   display: inline-block;
   outline: 0;
@@ -3542,7 +3597,7 @@ p {
 }
 
 .featured-articles__cta:focus, .featured-articles__cta:hover {
-  background: red;
+  background: #13D85E;
   color: #fff;
 }
 
@@ -3673,7 +3728,7 @@ p {
 }
 
 .signin-signup .main-content__wrapper {
-  margin-top: 10em;
+  padding: 12em 0 3em;
 }
 
 .signin-signup .form {
@@ -3756,6 +3811,30 @@ p {
   opacity: .75;
 }
 
+.btn-ghost {
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  padding: .5em 1em;
+  background: unset;
+  color: #000;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: 4px;
+  line-height: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #ddd;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.btn-ghost:focus, .btn-ghost:hover {
+  opacity: .75;
+  text-decoration: underline;
+}
+
 .checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3782,8 +3861,8 @@ p {
 .checkbox__checkmark {
   position: relative;
   margin-right: 8px;
-  height: 25px;
-  width: 25px;
+  height: 24px;
+  width: 24px;
   border: 1px solid #000;
   -webkit-transition: background .2s ease-in-out;
   transition: background .2s ease-in-out;
@@ -3820,7 +3899,6 @@ p {
 
 .signin-signup .form div:last-child button,
 .signin-signup .form div:last-child a {
-  margin-right: 1em;
   padding: .25em 2em;
 }
 
@@ -3835,6 +3913,151 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.form__link:focus, .form__link:hover {
+  text-decoration: underline;
+}
+
+/* Customize the label (the container) */
+.radio {
+  margin-right: 1em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.radio__checkmark {
+  margin-right: 8px;
+  height: 24px;
+  width: 24px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}
+
+/* On mouse-over, add a grey background color */
+.radio:hover input ~ .radio__checkmark {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .radio__checkmark {
+  background-color: #000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .radio__checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .radio__checkmark:after {
+  top: 12px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  border: 1px solid #000;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 22px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000 transparent;
+  top: 16px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  padding: 8px 16px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.select-selected {
+  color: #000;
+}
+
+.select-items div {
+  color: #fff;
+}
+
+.select-items div:not(:last-child) {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #000;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: #13D85E;
 }
 
 .about {
@@ -4140,6 +4363,33 @@ p {
   color: #13D85E;
 }
 
+.connect-list-article .main-content {
+  padding-top: 10em;
+}
+
+.connect-list-article {
+  background: #fff;
+}
+
+.connect-list-article .main-header {
+  background: #000;
+}
+
+.connect-list-article__category {
+  position: relative;
+  height: 240px;
+}
+
+.connect-list-article__category-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
 .article .main-header {
   background: #000;
 }
@@ -4228,7 +4478,7 @@ p {
 .featured {
   position: relative;
   overflow: hidden;
-  height: 80vh;
+  height: 60vh;
 }
 
 @media (min-height: 901px) {
@@ -4253,7 +4503,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 320px;
+  height: 60vh;
 }
 
 .article-category__overlay {
@@ -4279,6 +4529,7 @@ p {
           transform: translate(-50%, -50%);
   text-transform: uppercase;
   font-size: 1.5rem;
+  font-weight: 700;
   letter-spacing: 4px;
   text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.37);
 }
@@ -4455,6 +4706,7 @@ p {
 }
 
 .grid-3x3__item {
+  padding: 1em 1.75em;
   width: 100%;
   height: 420px;
   display: -webkit-box;
@@ -4489,6 +4741,10 @@ p {
 
 .space-events-reports {
   padding: 12em 0 3em;
+}
+
+.upcomming {
+  cursor: pointer;
 }
 
 .upcomming-events-modal {
@@ -4552,8 +4808,8 @@ p {
   font-size: .975rem;
   max-height: 200px;
   overflow: hidden;
-  -webkit-transition: max-height .4s ease-in-out, padding-bottom .4s ease-in-out;
-  transition: max-height .4s ease-in-out, padding-bottom .4s ease-in-out;
+  -webkit-transition: max-height .4s linear, padding-bottom .4s linear;
+  transition: max-height .4s linear, padding-bottom .4s linear;
 }
 
 .upcomming-events-modal__content p {
@@ -4565,7 +4821,7 @@ p {
 }
 
 .upcomming-events-modal__content.active {
-  max-height: 2560px;
+  max-height: 999999px;
   padding-bottom: 3.5em;
 }
 

@@ -98,7 +98,7 @@
 .featured {
     position: relative;
     overflow: hidden;
-    height: 80vh;
+    height: 60vh;
 
     @media (min-height: 901px) {
         height: 640px;
@@ -118,7 +118,7 @@
     position: relative;
     display: flex;
     width: 100%;
-    height: 320px;
+    height: 60vh;
 }
 
 .article-category__overlay {
@@ -143,6 +143,7 @@
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     font-size: 1.5rem;
+    font-weight: 700;
     letter-spacing: 4px;
     text-shadow: 2px 4px 8px rgba(0 , 0, 0, .37);
 }

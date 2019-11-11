@@ -94,62 +94,69 @@
             </div> -->
 
             <form action="#" class="form">
-                <legend class="form__title">
-                    Hey! You
-                </legend>
-                <div class="form__group">
+                <div class="form__group mb-1">
                     <label for="fullname" class="visually-hidden">Full Name</label>
                     <input type="text" class="form__control" id="fullname" name="fullname" placeholder="Full Name">
                 </div>
-                <div class="form__group">
-                    <label for="male">
-                        <input type="radio" name="gender" value="male">
+                <div class="form__group mb-1">
+                    <label for="male" class="radio">
+                        <input id="male" type="radio" name="gender" value="male">
+                        <div class="radio__checkmark"></div>
                         Male
                     </label>
-                    <label for="femalre">
-                        <input type="radio" name="gender" value="female">
+                    <label for="female" class="radio">
+                        <input id="female" type="radio" name="gender" value="female">
+                        <div class="radio__checkmark"></div>
                         Female
                     </label>
                 </div>
-                <div class="form__group">
+                <div class="form__group mb-1">
                     <label for="phoneNumber" class="visually-hidden">Phone Number</label>
                     <input type="tel" class="form__control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
                 </div>
-                <div class="form__group">
+                <div class="form__group mb-1">
                     <label for="fullname" class="visually-hidden">Email</label>
                     <input type="email" class="form__control" id="email" name="email" placeholder="Email">
                 </div>
-                <div class="form__group">
+                <div class="form__group mb-1">
                     <label for="password" class="visually-hidden">Password</label>
                     <input type="password" class="form__control" id="password" name="password" placeholder="Password">
                 </div>
-                <div class="form__group">
+                <div class="form__group mb-1">
                     <label for="password2" class="visually-hidden">Confirm Password</label>
                     <input type="password" class="form__control" id="password2" name="password2" placeholder="Confirm Password">
                 </div>
-                <div class="form__group">
+                <div class="form__group mb-1">
                     <label for="kota">Kota</label>
-                    <select name="kota" id="kota">
-                        <option value="">- Select a value-</option>
-                    </select>
+                    <div class="custom-select">
+                        <select name="kota" id="kota">
+                            <option value="">- Select a value-</option>
+                            <option value="samarinda">Samarinda</option>
+                            <option value="balikpapan">Balikpapan</option>
+                            <option value="banjarmasin">Banjarmasin</option>
+                            <option value="bontang">Bontang</option>
+                            <option value="sangata">Sangata</option>
+                            <option value="berau">Berau</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form__group">
+                <div class="form__group mb-1">
                     <label for="subscribe" class="checkbox">
                         <input type="checkbox" name="subscribe" id="subscribe">
                         <div class="checkbox__checkmark"></div>
                         Subscribe Community Hub
                     </label>
                 </div>
-                <div class="form__group">
+                <div class="form__group mb-1">
                     <label for="agree" class="checkbox">
                         <input type="checkbox" name="agree" id="agree">
                         <div class="checkbox__checkmark"></div>
                         I agree with the website's terms and conditions
                     </label>
                 </div>
-                <div class="form__group">
-                    <button type="submit" class="btn-primary">Login</button>
-                    <a class="btn-secondary" href="signup.html">Register</a>
+                <div class="form__group mb-1">
+                    <a class="btn-ghost" href="signin.html">Login</a>
+                    <button type="submit" class="btn-primary">Register</button>
                 </div>
             </form>
         </div>

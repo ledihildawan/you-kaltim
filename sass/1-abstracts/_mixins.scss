@@ -14,3 +14,8 @@
     text-transform: uppercase;
     @content;
 }
+
+@mixin resetList {
+    padding-left: 0;
+    list-style-type: none;
+}

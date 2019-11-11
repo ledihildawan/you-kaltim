@@ -110,7 +110,7 @@
 // end of Header
 
 .signin-signup .main-content__wrapper {
-    margin-top: 10em;
+    padding: 12em 0 3em;
 }
 
 .signin-signup {
@@ -169,6 +169,18 @@
     }
 }
 
+.btn-ghost {
+    @include button(unset, #000);
+    border: 1px solid #ddd;
+    transition: opacity .2s ease-in-out;
+
+    &:focus,
+    &:hover {
+        opacity: .75;
+        text-decoration: underline;
+    }
+}
+
 .checkbox {
     display: flex;
     align-items: center;
@@ -196,8 +208,8 @@
     // top: 0;
     // left: 0;
     margin-right: 8px;
-    height: 25px;
-    width: 25px;
+    height: 24px;
+    width: 24px;
     border: 1px solid #000;
     transition: background .2s ease-in-out;
 }
@@ -241,7 +253,7 @@
 
 .signin-signup .form div:last-child button,
 .signin-signup .form div:last-child a {
-    margin-right: 1em;
+    // margin-right: 1em;
     padding: .25em 2em;
 }
 
@@ -252,4 +264,153 @@
 .signin-signup.signup .form__group:last-child {
     display: flex;
     justify-content: space-between;
+}
+
+.form__link {
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Customize the label (the container) */
+.radio {
+    margin-right: 1em;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    // padding-left: 35px;
+    // margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.radio__checkmark {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    margin-right: 8px;
+    height: 24px;
+    width: 24px;
+    // background-color: #eee;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: background .2s ease-in-out;
+}
+
+/* On mouse-over, add a grey background color */
+.radio:hover input ~ .radio__checkmark {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .radio__checkmark {
+    background-color: #000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .radio__checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .radio__checkmark:after {
+    top: 12px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  border: 1px solid #000;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 22px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000 transparent;
+  top: 16px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  padding: 8px 16px;
+  border: 1px solid #000;
+//   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+.select-selected {
+    color: #000;
+}
+
+.select-items div {
+    color: #fff;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #1a1a1a;
+    }
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #000;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: $clr-primary;
 }
